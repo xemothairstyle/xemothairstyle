@@ -1,0 +1,168 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: #696969;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+}
+nav a {
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+nav a:hover {
+    background-color: #555;
+}
+.container {
+    padding: 20px;
+}
+.services, .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+.card {
+    background-color: #696969;
+    border: 1px solid #696969;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+}
+footer {
+    background-color: #696969;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+
+    .services, .gallery {
+        grid-template-columns: 1fr; /* Satu kolom untuk layar kecil */
+    }
+
+    .contact-info {
+        text-align: relative; /* Teks menjadi rata tengah */
+    }
+}
+
+#contact h2 {
+    text-align: center; /* Pusatkan teks */
+    margin-bottom: 20px; /* Jarak di bawah teks */
+    display: inline-block; /* Supaya garis bawah hanya selebar teks */
+    position: relative; /* Agar pseudo-element bisa digunakan */
+}
+
+#contact h2::after {
+    content: ""; /* Elemen kosong untuk garis bawah */
+    display: block;
+    width: 100%; /* Panjang garis sama dengan teks */
+    height: 2px; /* Ketebalan garis */
+    background-color: #333; /* Warna garis */
+    margin-top: 5px; /* Jarak antara teks dan garis */
+}
+
+
+.contact-info {
+    display: flex;
+    flex-direction: column; /* Susun elemen secara vertikal */
+    align-items: flex-start; /* Ratakan ke kiri */
+    gap: 15px; /* Jarak antar elemen */
+    margin: 20px auto; /* Pusatkan secara horizontal */
+    max-width: 500px; /* Batasi lebar untuk tampilan rapi */
+}
+
+.contact-info a {
+    display: flex; /* Ikon dan teks dalam satu baris */
+    align-items: center; /* Sejajarkan ikon dan teks secara vertikal */
+    gap: 10px; /* Jarak antara ikon dan teks */
+    text-decoration: none; /* Hilangkan garis bawah */
+    color: #444; /* Warna teks */
+    font-size: 1rem; /* Ukuran font */
+}
+
+.contact-info a:hover {
+    color: #007BFF; /* Ubah warna saat dihover */
+}
+
+.contact-info i {
+    font-size: 1.5rem; /* Ukuran ikon */
+    color: #444; /* Warna ikon */
+}
+
+.contact-info a:hover {
+    color: #007BFF; /* Warna teks berubah saat hover */
+}
+
+.contact-info a:hover i {
+    color: #007BFF; /* Warna ikon berubah saat hover */
+}
+
+.contact-info a:active {
+    color: #FF5733; /* Warna teks berubah saat ditekan */
+}
+
+.contact-info a:active i {
+    color: #FF5733; /* Warna ikon berubah saat ditekan */
+}
+
+
+
+
+/* Media Query untuk layar sangat kecil (di bawah 480px) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    nav a {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .contact-info p {
+        font-size: 0.9rem;
+    }
+}
