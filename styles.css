@@ -95,10 +95,10 @@ footer {
 
 .contact-info {
     display: flex;
-    flex-direction: column; /* Susun elemen secara vertikal */
-    align-items: flex-start; /* Ratakan ke kiri */
+    flex-direction: column; /* Elemen secara vertikal */
+    align-items: flex-start; /* Rata kiri */
     gap: 15px; /* Jarak antar elemen */
-    margin: 20px auto; /* Pusatkan secara horizontal */
+    margin: 20px 0; /* Margin atas dan bawah */
     max-width: 500px; /* Batasi lebar untuk tampilan rapi */
 }
 
@@ -120,10 +120,6 @@ footer {
     color: #444; /* Warna ikon */
 }
 
-.contact-info a:hover {
-    color: #007BFF; /* Warna teks berubah saat hover */
-}
-
 .contact-info a:hover i {
     color: #007BFF; /* Warna ikon berubah saat hover */
 }
@@ -135,9 +131,6 @@ footer {
 .contact-info a:active i {
     color: #FF5733; /* Warna ikon berubah saat ditekan */
 }
-
-
-
 
 /* Media Query untuk layar sangat kecil (di bawah 480px) */
 @media (max-width: 480px) {
